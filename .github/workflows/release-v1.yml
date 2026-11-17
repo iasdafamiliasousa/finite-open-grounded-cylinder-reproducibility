@@ -1,4 +1,4 @@
-name: Create v1.0.0 release
+name: Create v1.0.1 release
 
 on:
   push:
@@ -20,23 +20,23 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Create v1.0.0 tag and release if absent
+      - name: Create v1.0.1 tag and release if absent
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -e
-          if gh release view v1.0.0 >/dev/null 2>&1; then
-            echo "Release v1.0.0 already exists."
+          if gh release view v1.0.1 >/dev/null 2>&1; then
+            echo "Release v1.0.1 already exists."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git rev-parse "v1.0.0" >/dev/null 2>&1; then
-            echo "Tag v1.0.0 already exists."
+          if git rev-parse "v1.0.1" >/dev/null 2>&1; then
+            echo "Tag v1.0.1 already exists."
           else
-            git tag -a v1.0.0 -m "v1.0.0"
-            git push origin v1.0.0
+            git tag -a v1.0.1 -m "v1.0.1"
+            git push origin v1.0.1
           fi
-          gh release create v1.0.0 \
-            --title "v1.0.0 — Reproducibility package" \
+          gh release create v1.0.1 \
+            --title "v1.0.1 — Reproducibility package" \
             --notes "Initial public reproducibility release for the finite open grounded cylindrical shell calculations. Includes the weighted Nyström convergence code, tabulated convergence data, extrapolation summary, requirements, citation metadata, and license."
