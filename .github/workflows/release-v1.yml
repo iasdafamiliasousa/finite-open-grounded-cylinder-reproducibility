@@ -1,0 +1,42 @@
+name: Create v1.0.0 release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/release-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create v1.0.0 tag and release if absent
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          if gh release view v1.0.0 >/dev/null 2>&1; then
+            echo "Release v1.0.0 already exists."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git rev-parse "v1.0.0" >/dev/null 2>&1; then
+            echo "Tag v1.0.0 already exists."
+          else
+            git tag -a v1.0.0 -m "v1.0.0"
+            git push origin v1.0.0
+          fi
+          gh release create v1.0.0 \
+            --title "v1.0.0 — Reproducibility package" \
+            --notes "Initial public reproducibility release for the finite open grounded cylindrical shell calculations. Includes the weighted Nyström convergence code, tabulated convergence data, extrapolation summary, requirements, citation metadata, and license."
