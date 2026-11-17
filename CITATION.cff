@@ -8,3 +8,6 @@ authors:
 version: 1.0.0
 date-released: 2026-11-16
 license: MIT
+doi: "10.5281/zenodo.24296896"
+repository-code: "https://github.com/iasdafamiliasousa/finite-open-grounded-cylinder-reproducibility"
+url: "https://doi.org/10.5281/zenodo.24296896"
