@@ -1,0 +1,35 @@
+Qind_over_q
+  F_inf          = -9.9970339780629769e-01
+  c              = -1.0254923906442318e-01
+  p              = 1.0013775367
+  sigma_F_inf    = 3.922196e-08
+  fit_rms        = 5.005188e-09
+  N_min_fit      = 180
+  N_points_fit   = 5
+
+sigma_at_source
+  F_inf          = -1.0554045917176515e-01
+  c              = -7.1738830309539980e-02
+  p              = 0.9973528236
+  sigma_F_inf    = 1.884162e-07
+  fit_rms        = 2.386611e-08
+  N_min_fit      = 180
+  N_points_fit   = 5
+
+C_left
+  F_inf          = -7.9597888954147263e-05
+  c              = 1.5209815904410472e-03
+  p              = 1.0000912770
+  sigma_F_inf    = 7.138757e-09
+  fit_rms        = 9.088276e-10
+  N_min_fit      = 180
+  N_points_fit   = 5
+
+C_right
+  F_inf          = -7.9597888953967949e-05
+  c              = 1.5209815903038028e-03
+  p              = 1.0000912769
+  sigma_F_inf    = 7.138760e-09
+  fit_rms        = 9.088276e-10
+  N_min_fit      = 180
+  N_points_fit   = 5
