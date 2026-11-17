@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated paper and archived repository."
+title: "Finite Open Grounded Cylinder — Reproducibility Package"
+type: software
+authors:
+  - family-names: "de Sousa"
+    given-names: "J. Ricardo"
+version: 1.0.0
+date-released: 2026-11-16
+license: MIT
