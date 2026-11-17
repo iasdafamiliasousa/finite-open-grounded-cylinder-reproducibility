@@ -58,4 +58,4 @@ This package reproduces the convergence calculations underlying the manuscript's
 
 ## Citation
 
-A persistent DOI will be added after archiving a release on Zenodo.
+The archived reproducibility package is available on Zenodo: https://doi.org/10.5281/zenodo.24296896
